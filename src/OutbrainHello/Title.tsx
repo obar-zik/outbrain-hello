@@ -6,7 +6,7 @@ export const Title: React.FC<{
 }> = ({titleText, titleColor}) => {
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
-	const text = titleText.split(' ').map((t) => ` ${t} `);
+	const text = `Hi ${titleText}!`.split(' ').map((t) => ` ${t} `);
 	return (
 		<h1
 			style={{

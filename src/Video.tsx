@@ -1,51 +1,33 @@
 import {Composition} from 'remotion';
-import {HelloWorld} from './HelloWorld';
-import {Logo} from './HelloWorld/Logo';
-import {Subtitle} from './HelloWorld/Subtitle';
-import {Title} from './HelloWorld/Title';
+import {OutbrainHello} from './OutbrainHello';
+import {RollingHead} from './OutbrainHello/RollingHead';
 
 export const RemotionVideo: React.FC = () => {
 	return (
 		<>
 			<Composition
-				id="HelloWorld"
-				component={HelloWorld}
-				durationInFrames={150}
-				fps={30}
-				width={1920}
+				id="OutbrainHello"
+				component={OutbrainHello}
+				durationInFrames={90}
 				height={1080}
+				width={1920}
+				fps={30}
 				defaultProps={{
-					titleText: 'Welcome to Remotion',
-					titleColor: 'black',
+					ameliaColor: '#ee6513',
+					memberName: 'Omri',
 				}}
 			/>
 			<Composition
-				id="Logo"
-				component={Logo}
-				durationInFrames={200}
-				fps={30}
-				width={1920}
+				id="RollingHead"
+				component={RollingHead}
+				durationInFrames={90}
 				height={1080}
-			/>
-			<Composition
-				id="Title"
-				component={Title}
-				durationInFrames={100}
-				fps={30}
 				width={1920}
-				height={1080}
+				fps={30}
 				defaultProps={{
-					titleText: 'Welcome to Remotion',
-					titleColor: 'black',
+					color: '#ee6513',
+					rollingTimeInFrames: 45,
 				}}
-			/>
-			<Composition
-				id="Subtitle"
-				component={Subtitle}
-				durationInFrames={100}
-				fps={30}
-				width={1920}
-				height={1080}
 			/>
 		</>
 	);
