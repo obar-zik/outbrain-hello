@@ -14,7 +14,7 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				defaultProps={{
 					ameliaColor: '#ee6513',
-					memberName: 'Omri',
+					memberName: 'World',
 				}}
 			/>
 			<Composition
